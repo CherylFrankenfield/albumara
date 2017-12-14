@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
@@ -11,6 +12,24 @@
   <body>
     <div class="container">
       <h1>Albumarama!</h1>
+      <form id="rating">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label class = "full" for="star5" title="5 stars"></label>
+       <input type="radio" id="star4" name="rating" value="4" />
+       <label class = "full" for="star4" title="4 stars"></label>
+       <input type="radio" id="star3" name="rating" value="3" />
+       <label class = "full" for="star3" title="3 stars"></label>
+       <input type="radio" id="star2" name="rating" value="2" />
+       <label class = "full" for="star2" title="2 stars"></label>
+       <input type="radio" id="star1" name="rating" value="1" />
+       <label class = "full" for="star1" title="1 star"></label>
+        <!-- <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i> -->
+      </form>
+
       <div class="form-container">
         <form id="form">
           <label for="band-name">Band Name</label>
@@ -21,6 +40,8 @@
           <input type="text" name="year" id="year">
           <label for="album-art">Include Album Art URL</label>
           <input type="text" name="album-art" id="art">
+          <label for="comments">Include your comments here:</label>
+          <input type="text" name="comments" id="comments">
           <button type="submit" name="button">Submit</button>
         </form>
       </div>
