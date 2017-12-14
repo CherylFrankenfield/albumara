@@ -5,9 +5,24 @@
 
 body {
   background-color: #F7EDE2;
+  font-family: 'Open Sans', sans-serif;
 }
 
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+.title {
+  position: relative;
+}
+
+#bubble {
+  position: absolute;
+  width: 20%;
+  transform: rotateY(180deg);
+}
+
+#bubble path {
+  fill: #f28482;
+}
+
+
 
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -31,13 +46,13 @@ h1:before {
 
 h2 {
   margin: 0;
+  font-size: 15px;
 }
 
 .card {
-  width: 200px;
-  height: 200px;
-  background-color: black;
-  flex-basis: 25%;
+  width: 300px;
+  height: 300px;
+  background-color: #F28482;
   overflow: hidden;
   margin: 5px;
 }
@@ -53,7 +68,7 @@ h2 {
 .card-img {
   width: 100%;
   height: 200px;
-  background-color: #84A59D;
+  background-color: #F5CAC3;
   background-size: cover;
   transition: all 700ms ease-in-out;
 }
@@ -62,9 +77,10 @@ h2 {
   word-wrap: break-word;
   width: 100%;
   height: 200px;
-  background-color: black;
-  padding: 5px;
-  color: #84A59D;
+  background-color: #F28482;
+  padding: 8px;
+  color: #545857;
+  transform: translateY(10px);
   transition: all 700ms ease-in-out;
 }
 
@@ -76,7 +92,7 @@ h2 {
 }
 
 .form-container {
-  width: 100%;
+  width: 90%;
   height: 400px;
   background-color: #F6BD60;
   display: flex;
@@ -97,50 +113,28 @@ h2 {
 form {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   width: 50%;
 }
 
+textarea {
+  max-height: 100px;
+  max-width: 100%;
+  flex-basis: 50%;
+
+}
 input {
   margin-top: 5px;
   margin-bottom: 5px;
+  flex-basis: 50%;
 }
 
-/* STAR RATING */
-
-/*.rating {
-  display: inline-block;
+label {
+  text-transform: uppercase;
+  margin-top: 8px;
+  flex-basis: 50%;
+  color: white;
+  font-size: 18px;
 }
-
-.fa-star path{
-  fill: black;
-}
-.fa-star:hover path {
-  fill: gold;
-}*/
-@font-face{
-font-family: Reef;
-src: url('/fonts/fontawesome-webfont.woff'), url('fontawesome-webfont.woff') format('woff');}
-
-#rating {
-  display: inline;
-  unicode-bidi: bidi-override;
-}
-
- input[type="radio"]::before {
-  font-family: 'FontAwesome';
-  content: "\f005";
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
 /* BUTTON STYLES */
 button {
